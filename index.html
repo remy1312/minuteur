@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/prelude.css">
 <link rel="stylesheet" href="css/rainbow.css">
 <link rel="stylesheet" href="css/progress.css">
+<link rel="stylesheet" href="css/minuteur.css">
 <style type="text/css">
     body {
         padding: 40px;
@@ -19,26 +20,34 @@
 </style>
 </head>
 <body>
-    <section>
-        <h2>PieProgress</h2>
+    <div id="content">
+        <p id ="console">console</p>
         <section>
-            <div class="row">
-              <div class="pie_progress--countdown" role="progressbar" data-barcolor="#3daf2c" data-barsize="10"> 
-                    <span class="pie_progress__number">2: 00</span>
-             </div>
-                <div>
-                    <button id="button_start">start</button>
-                    <button id="button_stop">stop</button>
-                    <button id="button_finish">finish</button>
-                    <button id="button_reset">reset</button>
+            <h2>Minuteur</h2>
+            <section>
+                <div class="row">
+                  <p><input type="number" id="minutes_id"/>Min  <input type="number" id="secondes_id"/>Sec</p>
+                  <div class="pie_progress--countdown" role="progressbar" data-barcolor="#000000" data-barsize="20" size="480"> 
+                        <span class="pie_progress__number"></span>
+                 </div>
+                 <audio id="alerte-audio" src="sound/alerte.mp3" >
+                        <p>Your browser does not support the <code>audio</code> element.</p>
+                 </audio>
+                    <div>
+                        <button id="button_start">start</button>
+                        <button id="button_stop">stop</button>
+                        <button id="button_finish">finish</button>
+                        <button id="button_reset">reset</button>
+                    </div>
                 </div>
-            </div>
+            </section>
         </section>
-    </section>
+        
+        <script type="text/javascript" src="js/rainbow.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-asPieProgress.js"></script>
+        <script type="text/javascript" src="js/minuteur.js"></script>
 
-    <script type="text/javascript" src="js/rainbow.min.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-asPieProgress.js"></script>
-    <script type="text/javascript" src="js/minuteur.js"></script>
+    </div>
 </body>
 </html>

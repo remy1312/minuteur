@@ -1,0 +1,15 @@
+.alert{
+    background-color: red;
+}
+.end{
+    background-color: black;
+}
+.ok{
+    background-color: green;
+}
+.warning{
+    background-color: orange;
+}
+.info{
+    background-color: yellow;
+}

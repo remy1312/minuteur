@@ -406,7 +406,18 @@
         destory: function() {
             this.$element.data(pluginName, null);
             this._trigger('destory');
-        }
+        },
+        reinit: function(_max,_first,_speed,_goal) {
+            this._clear();
+            this.max = _max;
+            this.first = _first;
+            this.options.speed =_speed;
+            this.goal=_goal;
+            this._drawBar(this.first);
+            this._update(this.first);
+            this._trigger('start');
+            this.go(this.goal);
+        },
     };
 
     $.fn[pluginName] = function(options) {
